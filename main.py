@@ -148,7 +148,7 @@ class MainWindow(QObject):
 
     def start_player(self):
         self.player = QMediaPlayer()
-        sound = QMediaContent(QUrl.fromLocalFile(os.path.abspath('light-562.mp3')))
+        sound = QMediaContent(QUrl.fromLocalFile(os.path.abspath('/components/light-562.mp3')))
         self.player.setMedia(sound)
 
     def start_workers(self):

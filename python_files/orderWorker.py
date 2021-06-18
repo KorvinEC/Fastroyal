@@ -137,8 +137,9 @@ class OrderRequestObject(QObject):
                     order.emit()
                 self.orders = fresh_orders
 
-        except Exception as ex:
-            print('Error: ', ex)
+        except FileNotFoundError:
+            print('Here')
+            self.load_orders()
 
     def load_orders(self):
         headers = {'Authorization': 'Bearer ' + self.token}
